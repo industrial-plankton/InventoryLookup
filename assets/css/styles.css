@@ -1,0 +1,139 @@
+/*      
+ *      Copyright Industrial Plankton 2020
+ *      Written by:  Ben Ursel February 2020
+ *      Last Update: Ben Ursel April 2020
+ */
+
+/*** Style Class Groups ***/
+
+/*** Generic HTML Elements***/
+*{margin:0;padding:0;}
+button {    
+    background-color:Transparent;
+    background-repeat:no-repeat;
+    border:none;
+    cursor:pointer;
+    overflow:hidden;
+}
+form {
+    width: 33%;
+    padding: 0.5em 1em;
+    margin: .75em 0em;
+    box-sizing: border-box;
+    border: 0.1em solid #ff9900;
+    outline: none;
+    text-align: right;
+    background: rgba(255,153,0,0.3);
+    border-radius: 0.5em;
+}
+input:focus {background-color: lightblue; border-radius:0.3em;}
+p {
+    font-style:
+
+}
+
+/*** Generic Positioning and Styling ***/
+.centered{width:100%; text-align:center;}
+.lightText{font-style:oblique; font-weight:100;}
+.paddingNone{padding:0em 0em;}
+.paddingSmall{padding:0.5em 1em;}
+.paddingMedium{padding:2em 4em;}
+.paddingLarge{padding:2em 4em;}
+.rounded{border-radius:0.25em;}
+.roundedBig{border-radius:2em;}
+.sideBside{width:50%; float:left;}
+.textField{}
+.right{float:right}
+
+/*** Images and Logos ***/
+.headerLogo{width:20em; height:10em; top:3em; right:3em;}
+.headerLogo:Hover{filter:background.invert(100%); background:#0066ff;}
+.planktonImage{height:100%; width:auto; float:left;}
+
+
+/*** Navigation ***/
+.navBar{width:100%; overflow:hidden;}
+.navBarButon{-webkit-touch-callout:none; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
+.navBarEntry{padding:3em 1em 1em 1em; float:right; width:auto; border:none; display:block; outline:0;}
+.navBarEntry{font-family:"Arial Black", sans-serif; text-decoration: none;color:rgb(60,60,60);}
+.navBarEntry:active{color:rgb(200,45,220)}
+.navBarEntry:Hover{border-bottom:0.25em solid #ff9900}
+
+
+
+/*** Main Content ***/
+.borderedAlgaeGreen{border-left:0.3em solid rgb(135,175,120)}
+.borderedBlack{border-left:0.3em solid rgb(0,0,0)}
+.borderedIPBlue{border-left:0.3em solid rgb(70,40,255)}
+.borderedReactorPurple{border-left:0.3em solid rgb(225,40,240)}
+.mainContentBorder{/*max-width:200em; margin-top:1em*/}
+.mainContentHeader{}
+.mainHeader{font-size:3em; font-style: bold}
+
+/*** Footer ***/
+.footerHeight{height: 5em}
+
+/*** Backgrounds ***/
+.bodyBackground{
+    background:linear-gradient(to bottom, rgb(255,255,255), rgb(215,215,215));
+    background-repeat:no-repeat
+}
+.divBackground{background:rgba(127,60,127,.8)}
+.divGradient{background:linear-gradient(to right, rgba(255,40,240,1), rgba(255,255,255,1), rgba(135,175,120,1))}
+.gradBackground{
+    background-image:linear-gradient(to bottom right, rgba(70,40,135,1), rgba(255,255,255,1),rgba(100,255,0,1));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.sOpaque{opacity: 0.75}
+.sTranslucent{opacity: 0.25}
+
+.sBackground{background-color:rgba(12,98,245,0.3);}
+/*** Industrial Plankton Colours ***/
+.algaeGreenText{color:rgb(135, 175, 120)}
+.blackText{color:rgb(0,0,0)}
+.ipBlueText{color:rgb(70, 40, 255)}
+.reactorPurpleText{color:rgb(225, 40, 240)}
+.whiteText{color:rgb(255,255,255)}
+
+.algaeGreenBG{background:rgb(135, 175, 120)}
+.blackBG{background:rgb(0,0,0)}
+.ipBlueBG{background:#0c62f5}
+.reactorPurpleBG{background:rgb(225, 40, 240)}
+.whiteBG{background:rgb(255,255,255)}
+
+
+/*** Drop Down Button ***/
+.dropdown{display:inline-block; float:right;}
+.dropdownButton {
+    color:rgb(60,60,60);
+    border:none;
+    padding:3em 1em 1em 1em;
+    float:right;
+    width:auto;
+    border:none;
+    display:block;
+    outline:0;
+    font-family:"Arial Black", sans-serif;
+    text-decoration:none;
+}
+.dropdownContent {
+    display:none;
+    position:absolute;
+    min-width:160px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:0;
+}
+.dropdownContent a {
+    color:black;
+    padding:1em 1.5em;
+    text-decoration:none;
+    display:block;
+    z-index:0;
+}
+.dropdownButton a:hover {background-color:#ffffff;}
+.dropdown:hover .dropdownContent {display:block; position:fixed; top:5.5em;}
+.dropdown:hover .dropdownButton {border-bottom:0.25em solid #ff9900;}
+
+

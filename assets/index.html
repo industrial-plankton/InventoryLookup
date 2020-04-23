@@ -1,0 +1,142 @@
+<!--
+
+/*
+ *      Copyright Industrial Plankton 2020
+ *      Written by:  Ben Ursel Feb 2020     
+ *      Last Update: Ben Ursel April 2020
+ *
+ *      ---HTML Structure---
+ *      This file is the home (index) page for the Industrial Plankton Inventory Lookup system
+ *      It displays a search fields and a table to display database results       
+ *
+ *      ---File Structure---
+ *      Hosted by DigitalOcean at X.X.X.X/YY
+ *          assets
+ *              index.html
+ *              README.html
+ *              css
+ *                  -styles.css
+ *                  -amination.css
+ *                  -jexcel/jexcel.css
+                    -jexcelTableStyle/jexcelTableStyle.css
+ *              js
+ *                  -jexcel.js
+ *                  -fetchScript.js
+ *              img
+ *                  -planktonShadow.png
+ *
+ *      ---Functionality---
+ *      Uses jQuery.js library to perform js on elements
+ *      Makes post responses from form fields
+ *      Table is populated in the updateTable:Function callback 
+ *
+ */
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <!-- Order matters here! -->
+    <title id="title" class="title">IP Shop Lookup</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://bossanova.uk/jexcel/v3/jexcel.js"></script>
+    <script src="https://bossanova.uk/jsuites/v2/jsuites.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    
+    <script src="js/jexcel.js"></script>
+    <script src="js/fetchScript.js"></script>
+
+    <link rel="stylesheet" href="https://bossanova.uk/jsuites/v2/jsuites.css" type="text/css" />
+
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/jexcel/jexcel.css"/>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- USeful for fonts-->
+    <link rel="stylesheet" href="css/jexcelTableStyle/jexcelTableStyle.css" type="text/css" />    
+
+<!--    Online and currently unneeded version of some files
+    <link rel="stylesheet" href="https://bossanova.uk/jexcel/v3/jexcel.css" type="text/css" />
+    <link rel="stylesheet" href="css/animation.css"/>
+    <link rel="stylesheet" href="https://bossanova.uk/jexcel/v3/jexcel.datatables.css" type="text/css" />
+-->
+
+</head>
+
+<body id="body" class="bodyBackground">          <!-- Body -->
+    <div id="header">       <!-- Header -->
+
+        <div id="navBar" class="navBar">
+
+            <img class ="headerLogo paddingSmall" src="https://industrialplankton.com/wp-content/themes/plankton/images/shell/industrial-plankton.svg">           
+            <a class="#" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"></a>
+            <a href="#ChangeRequest" class="navBarEntry">Change Request</a>
+            <a href="#DataValidation" class="navBarEntry">Data Validation</a>
+            <a href="#Printed" class="navBarEntry">Printed...</a>
+
+            <div class="dropdown">
+                <button class="dropdownButton">Search</button>
+
+                <div class="dropdownContent">
+                    <a href="#KeywordSearch">Keyword Search</a>
+                    <a href="#TagLookup">Tag Lookup</a>
+                    <a href="#SubassemblySearch">Subassembly Search</a>
+                </div>
+
+            </div>         
+
+        </div>
+    </div>
+
+    <div class="animationArea">
+        <div class="paddingLarge lightText">
+            <a>           
+                <h1 class="lightText">Inventory Lookup Page</h1>
+            </a>
+            <a class="paddingSmall right">
+                <p>
+                    Here is some text in case it is required for anything...
+                    </br></br>
+                </p>    
+            <a>        
+        </div>
+
+        <div>   <!-- Searches -->
+            <a id="descriptionSearch" class="">        
+                <form action="/description" method="post">
+                    Description Keywords
+                    <input type="text" name="search">
+                    <input type="submit" value="Search">
+                </form>
+            </a>
+            <a id="supplierSearch" class="">        
+                <form action="/supplier" method="post">
+                    Supplier Keywords
+                    <input type="text" name="search">
+                    <input type="submit" value="Search">
+                </form>
+            </a>
+        </div>    
+    </div>
+
+    <div>       <!-- Table -->
+        <div id="table" class="span centered">
+            <a id="jexcelTable" class="centered sOpaque "></a>        
+        </div>    
+    </div>
+
+    <div>       <!-- Footer -->
+
+        <div id="footer" class="ipBlueBG paddingSmall footerHeight centered">
+            <img class="planktonImage"src="img/planktonShadow.png">            
+                <div class="sBackground">            
+                    <p>Copyright Industrial Plankton 2020 </br> Powered by Plankton</p>
+                </div>
+        </div>
+
+    </div>
+</body>
