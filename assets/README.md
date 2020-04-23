@@ -44,7 +44,7 @@
 "https://bossanova.uk/jexcel/v3/jexcel.js"</br>
 "https://bossanova.uk/jsuites/v2/jsuites.js"</br>
 "https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"</br>
-"https://bossanova.uk/jsuites/v2/jsuites.css type=text/css"</br>
+"https://bossanova.uk/jsuites/v2/jsuites.css"</br>
 "https://www.w3schools.com/w3css/4/w3.css"</br>
 </p>
 
